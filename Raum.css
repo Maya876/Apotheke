@@ -1,0 +1,11 @@
+@font-face {
+  font-family: myFont; /* set name */
+  src: url(./fantasy.ttf); /* url of the font */
+}
+
+#title {
+    text-align: center;
+    font-family: myFont;
+    font-size: 7vw;
+    color: black;
+}

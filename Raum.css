@@ -12,6 +12,7 @@
 
 
 #toggleBtn  {
+  font-family: myFont;
   font-size: 20px;
   cursor: pointer;
   background-color: #333;
@@ -19,6 +20,9 @@
   padding: 10px 15px;
   border: none;
   margin-bottom: 20px;
+
+  position: relative;
+  z-index: 1000;
 }
 
 .sidebar {
@@ -47,4 +51,13 @@
 
 .sidebar.active{
 	left: 0;
+}
+
+#mainContent {
+  margin-left: 0;
+  transition: margin-left 0.3s ease; /* Smooth sliding transition */
+}
+
+#mainContent.active {
+  margin-left: 250px;
 }

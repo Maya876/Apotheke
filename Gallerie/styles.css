@@ -163,3 +163,11 @@ model-viewer > #ar-prompt > img {
 #mainContent.active {
   margin-left: 250px;
 }
+
+#bubble{
+  transform: scale(0.1);
+}
+
+.magisch{
+  transform: scale(0.7);
+}

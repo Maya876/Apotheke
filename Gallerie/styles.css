@@ -171,3 +171,8 @@ model-viewer > #ar-prompt > img {
 .magisch{
   transform: scale(0.7);
 }
+
+#model{
+  width: 100vw;
+  height: 100vh;
+}

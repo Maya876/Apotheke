@@ -200,8 +200,8 @@ model-viewer > #ar-prompt > img {
 
 .qr-code{
     position: fixed; /* Keeps it locked to the screen even while scrolling */
-    top: 50vh;        /* Distance from the top */
-    left: 80vw;       /* Distance from the left */
+    top: 25vh;        /* Distance from the top */
+    left: 85vw;       /* Distance from the left */
     z-index: 1000;    /* Ensures it stays above other content */
     
     /* Control the element's actual container size */

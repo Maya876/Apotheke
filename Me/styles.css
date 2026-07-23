@@ -108,9 +108,35 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
+.back-arrow-link {
+    position: fixed; /* Keeps it locked to the screen even while scrolling */
+    top: 2vh;        /* Distance from the top */
+    left: 80vw;       /* Distance from the left */
+    z-index: 1000;    /* Ensures it stays above other content */
+    
+    /* Control the element's actual container size */
+    width: 20vw;
+    height: 20vh;      
+    display: block;
+}
+
+/* Ensure the 3D canvas scales to fit its wrapper box */
+.back-arrow-link model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent; /* Removes default background background */
+}
+
 @font-face {
   font-family: myFont; /* set name */
   src: url(./fantasy.ttf); /* url of the font */
+}
+
+#title {
+  font-family: myFont;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 #toggleBtn  {
@@ -162,38 +188,4 @@ model-viewer > #ar-prompt > img {
 
 #mainContent.active {
   margin-left: 250px;
-}
-
-#bubble{
-  transform: scale(0.1);
-}
-
-.magisch{
-  transform: scale(0.7);
-}
-
-.model{
-  width: 100vw;
-  height: 100vh;
-}
-
-
-/* Position the link container in the top-left corner */
-.back-arrow-link {
-    position: fixed; /* Keeps it locked to the screen even while scrolling */
-    top: 2vh;        /* Distance from the top */
-    left: 80vw;       /* Distance from the left */
-    z-index: 1000;    /* Ensures it stays above other content */
-    
-    /* Control the element's actual container size */
-    width: 20vw;      
-    height: 20vh;
-    display: block;
-}
-
-/* Ensure the 3D canvas scales to fit its wrapper box */
-.back-arrow-link model-viewer {
-    width: 100%;
-    height: 100%;
-    --poster-color: transparent; /* Removes default background background */
 }

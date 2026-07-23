@@ -197,3 +197,15 @@ model-viewer > #ar-prompt > img {
     height: 100%;
     --poster-color: transparent; /* Removes default background background */
 }
+
+.qr-code{
+    position: fixed; /* Keeps it locked to the screen even while scrolling */
+    top: 50vh;        /* Distance from the top */
+    left: 80vw;       /* Distance from the left */
+    z-index: 1000;    /* Ensures it stays above other content */
+    
+    /* Control the element's actual container size */
+    width: 10vw;      
+
+    display: block;
+}

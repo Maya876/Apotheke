@@ -132,6 +132,8 @@ model-viewer > #ar-prompt > img {
   src: url(./fantasy.ttf); /* url of the font */
 }
 
+
+
 #title {
   font-family: myFont;
   font-size: 40px;

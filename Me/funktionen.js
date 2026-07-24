@@ -15,6 +15,8 @@ function toggleSidebar() {
 
 const modelViewer = document.querySelector('#book');
 
+const bookbutton= document.getElementById('bookbutton');
+
 modelViewer.addEventListener('click', () => {
   if (modelViewer.paused) {
     modelViewer.play();

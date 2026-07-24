@@ -12,11 +12,15 @@
 
     <button id="toggleBtn" onclick="toggleSidebar()">☰ Menü</button>
 
+    <h1 id="title">About Me...</h1>
+
     <div class="sidebar" id="mySidebar">
         <a href="../Eingang/index.html">Startseite</a></li>
         <a href="../Gallerie/index.html">Gallerie</a></li>
         <a href="./index.html">About Me</a></li>
     </div>
+
+  
 
     <a href="../Eingang/index.html" class="back-arrow-link">
 
@@ -42,11 +46,62 @@
 
     </a>
 
+    <model-viewer id="book" 
+        src="book_an.glb"  
+        ar ar-modes="webxr scene-viewer quick-look" 
+        camera-controls tone-mapping="neutral" 
+        scale="1.5 1.5 1.5"
+        poster="poster.webp" shadow-intensity="1" 
+        camera-target="-0.0242m 0.2m 0.3098m" 
+        camera-orbit="6.32deg 75deg 0.8375m" field-of-view="30deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+
+        <extra-model id="sphere" camera-controls touch-action="pan-y" 
+        scale="0.5 0.5 0.5" offset="-1.0 0 0"   interaction-prompt="none" src="./brush2.glb" ar alt="A 3D model of a sphere">
+                  <div class="controls glass">
+                    <div>
+                      <p>Metalness: <span id="metalness-value"></span></p>
+                      <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+                    </div>
+                    <div>
+                      <p>Roughness: <span id="roughness-value"></span></p>
+                      <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+                    </div>
+                  </div>
+        </extra-model>
+
+        <extra-model id="piano" camera-controls touch-action="pan-y" 
+        scale="1 1 1" offset="1.5 0 0"   interaction-prompt="none" src="./Piano4.glb" ar alt="A 3D model of a sphere">
+                  <div class="controls glass">
+                    <div>
+                      <p>Metalness: <span id="metalness-value"></span></p>
+                      <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+                    </div>
+                    <div>
+                      <p>Roughness: <span id="roughness-value"></span></p>
+                      <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+                    </div>
+                  </div>
+        </extra-model>
+
+    </model-viewer>
+
+
+
+
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
   
-    <h1 id="title">About Me...</h1>
+    <script src="soundscript.js"></script>
 
     <script src="funktionen.js"></script>
   </body>

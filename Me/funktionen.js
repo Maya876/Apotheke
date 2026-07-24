@@ -12,3 +12,13 @@ function toggleSidebar() {
     content.style.marginLeft = "0";
   }
 }
+
+const modelViewer = document.querySelector('#book');
+
+modelViewer.addEventListener('click', () => {
+  if (modelViewer.paused) {
+    modelViewer.play();
+  } else {
+    modelViewer.pause();
+  }
+});
